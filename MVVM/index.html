@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script>
+    let mvvm = new Mvvm({
+        el: '#app',
+        data: {     // Object.defineProperty(obj, 'song', '发如雪');
+            song: '发如雪',
+            album: {
+                name: '十一月的萧邦',
+                theme: '夜曲'
+            },
+            arr: [1],
+            singer: '周杰伦'
+        }
+    });
+    // mvvm.album.name = '1'
+    // mvvm.song = '七里香'
+    mvvm.arr.push(2)
+    // console.log('---------', mvvm.album.name)
+</script>
+</html>

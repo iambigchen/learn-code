@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <a href="#/a">a</a>
+    <a href="#/b">b</a>
+    <button id="hash">back</button>
+
+    <div id="a">a</div>
+    <div id="b">b</div>
+    <button id="history">back</button>
+</body>
+<script>
+    var route = new Router()
+    route.router('/a', function() {
+        console.log('---------', 'aaa')
+    })
+
+    route.router('/b', function() {
+        console.log('---------', 'bbb')
+    })
+    let btn = document.querySelector('#hash')
+    btn.addEventListener('click', () => {
+        route.backoff()
+    })
+
+    var historyRoute = new HistoryRouter()
+    historyRoute.router('/a', function() {
+        console.log('---------', 'aaa')
+    })
+
+    historyRoute.router('/b', function() {
+        console.log('---------', 'bbb')
+    })
+    let a = document.querySelector('#a')
+    a.addEventListener('click', () => {
+        historyRoute.go('/a')
+    })
+    let b = document.querySelector('#b')
+    b.addEventListener('click', () => {
+        historyRoute.go('/b')
+    })
+
+    let btn2 = document.querySelector('#history')
+    btn2.addEventListener('click', () => {
+        history.go(-1)
+    })
+</script>
+</html>

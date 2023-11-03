@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <iframe src="http://front.longfor.com/maia-h5-demo/maia-h5-doc/api/device.html#%E8%8E%B7%E5%8F%96%E5%BA%94%E7%94%A8%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" frameborder="0" X-Frame-Options="*"></iframe>
+</body>
+<script>
+    var channel = new MessageChannel();
+    var para = document.querySelector('p');
+
+    var ifr = document.querySelector('iframe');
+    var otherWindow = ifr.contentWindow;
+
+    ifr.addEventListener("load", iframeLoaded, false);
+
+    function iframeLoaded() {
+        console.log('---------', 123)
+        otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+    }
+
+    window.onmessage = handleMessage
+
+    channel.port1.onmessage = handleMessage;
+    function handleMessage(e) {
+        console.log('---------', 2222)
+        para.innerHTML = e.data;
+    }   
+</script>
+</html>
