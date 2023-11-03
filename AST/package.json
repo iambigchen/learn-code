@@ -1,0 +1,21 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.13.9",
+    "@babel/parser": "^7.13.12",
+    "@babel/template": "^7.12.13",
+    "@babel/traverse": "^7.13.0",
+    "@babel/types": "^7.13.12",
+    "fs-extra": "^9.1.0",
+    "htmlparser2": "^6.0.1"
+  }
+}

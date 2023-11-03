@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      border: 1px solid red;
+      width: auto;
+      margin: 0 auto
+    }
+    .left, .right, .content{
+      height: 80px;
+    }
+    .left{
+      background-color: aqua;
+      width: 80px;
+    }
+    .content{
+      background-color:bisque
+    }
+    .right{
+      width: 80px;
+      background-color:cadetblue
+    }
+    /* 1 */
+    .l1{
+      float: left;
+    }
+    .r1{
+      float: right
+    }
+    .c1{
+      margin: 0 80px
+    }
+    /* 2 */
+    .l2{
+      float: left;
+    }
+    .r2{
+      float: right
+    }
+    .c2{
+      overflow: hidden;
+    }
+    /* 3 */
+    .b3{
+      overflow: hidden;
+    }
+    .c3-out{
+      width: 100%;
+      float: left;
+    }
+    .l3{
+      margin-left: -100%;
+      float: left;
+    }
+    .r3{
+      float: left;
+      margin-left: -80px;
+    }
+    .c3{
+      height: 80px;
+      margin: 0 80px
+    }
+    /* 4 */
+    .b4{
+      padding: 0 80px;
+      overflow: hidden;
+    }
+    .c4{
+      width: 100%;
+      float: left;
+    }
+    .l4{
+      position: relative;
+      left: -80px;
+      margin-left: -100%;
+      float: left;
+    }
+    .r4{
+      position: relative;
+      right: -80px;
+      float: right;
+      margin-left: -80px;
+    }
+    /* 5 */
+    .b5{
+      display: flex
+    }
+    .c5{
+      flex: 1
+    }
+    .l5{
+      order: -1
+    }
+    /* 6 */
+    .b6{
+      padding: 0 80px;
+      position: relative
+    }
+    .l6{
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .r6{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    /* 7 */
+    .b7{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 80px auto 80px
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="left l1"></div>
+    <div class="right r1"></div>
+    <div class="content c1"></div>
+  </div>
+  <div class="box">
+    <div class="left l2"></div>
+    <div class="right r2"></div>
+    <div class="content c2"></div>
+  </div>
+  <div class="box b3">
+      <div class="c3-out">
+        <div class="content c3"></div>
+      </div>
+      <div class="left l3"></div>
+      <div class="right r3"></div>
+  </div>
+  <div class="box b4">
+      <div class="content c4"></div>
+      <div class="left l4"></div>
+      <div class="right r4"></div>
+  </div>
+  <div class="box b5">
+    <div class="content c5"></div>
+    <div class="left l5"></div>
+    <div class="right r5"></div>
+  </div>
+  <div class="box b6">
+    <div class="content c6"></div>
+    <div class="left l6"></div>
+    <div class="right r6"></div>
+  </div>
+  <div class="box b7">
+    <div class="left l7"></div>
+    <div class="content c7"></div>
+    <div class="right r7"></div>
+  </div>
+</body>
+</html>

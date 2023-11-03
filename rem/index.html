@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul{
+      width: 10rem;
+    }
+    li{
+      height: 1rem;
+      width: 100%;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li>
+        这是一段文字
+      </li>
+      <li>
+        这是一段文字
+      </li>
+      <li>
+        这是一段文字
+      </li>
+      <li>
+        这是一段文字
+      </li>
+    </ul>
+  </div>
+</body>
+<script>
+  var dpr = window.devicePixelRatio || 1
+  var docEl = document.documentElement
+  var scale = 1 / dpr;
+  var metaEl = document.querySelector('meta[name="viewport"]');
+  var rem = docEl.clientWidth * dpr / 10
+  docEl.style.fontSize = rem + 'px'
+  metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+</script>
+</html>

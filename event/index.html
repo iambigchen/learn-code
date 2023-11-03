@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: antiquewhite
+    }
+    ul{
+      width: 100px;
+      height: 100px;
+      list-style: none;
+      background-color: beige
+    }
+    li{
+      width: 50px;
+      height: 50px;
+      background-color: cadetblue
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+</body>
+<script>
+  const div = document.querySelector('div')
+  const ul = document.querySelector('ul')
+  const li = document.querySelector('li')
+  function addClick(type) {
+    return (e) => {
+      console.log(type, e)
+    }
+  }
+  const flag = true
+  div.addEventListener('click', addClick('div'), !flag)
+  div.addEventListener('click', addClick('div2'), flag)
+  div.addEventListener('click', addClick('div3'), flag)
+  ul.addEventListener('click', addClick('ul'), flag)
+  li.addEventListener('click', addClick('li'), flag)
+</script>
+</html>

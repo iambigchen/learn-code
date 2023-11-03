@@ -1,0 +1,15 @@
+{
+  "name": "httpheader",
+  "version": "1.0.0",
+  "description": "http1.1实现了长连接，所谓的长连接指的是tcp三次握手后，不会立刻断开。默认的`Connection: keep-alive` ，可以通过设置为`Connection: close`关闭  `Connection: keep-alive`",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon server/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

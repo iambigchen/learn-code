@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM fully loaded and parsed')
+        })
+        window.onload = function () {
+            console.log('load')
+        }
+    </script> -->
+    <!-- <script type="module">
+        import es6module from '/module/es6_module.js'
+        console.log('its es6 module =', es6module)
+    </script> -->
+    <script src="./module/es6_module.js" type="module"></script>
+    <script>
+        // 即使在script上加defer，也不会生效
+        console.log('我在后面，但是先执行了');
+    </script>
+    <!-- <script defer src="./defer.js"></script>
+    <script async src="./async.js"></script> -->
+</head>
+<body>
+    
+</body>
+</html>

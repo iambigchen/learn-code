@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  hello gzip
+</body>
+<script>
+  var myHeaders = new Headers()
+  myHeaders.append('Accept', 'text/html')
+  fetch('/api/accept?a=1', {
+    method: 'get',
+    headers: myHeaders,
+    success(res) {
+      console.log(1234, res);
+    }
+  })
+  fetch('/12.png', {
+    method: 'get',
+    success(res) {
+      console.log(1234, res);
+    }
+  })
+  fetch('/123.png', {
+    method: 'get',
+    success(res) {
+      console.log(1234, res);
+    }
+  })
+  fetch('/postTest', {
+    method: 'post',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      a: 1
+    }),
+    success(res) {
+      console.log(1234, res);
+    }
+  })
+</script>
+</html>
